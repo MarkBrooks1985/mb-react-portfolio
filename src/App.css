@@ -1,38 +1,218 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Voltaire&display=swap');
+
+/* Below is the coded route to host varibles for easy reference and setting of color etc */
+
+:root {
+    --background-color: #3e6e7a;
+    --text-color: #c9c9ce;
+    --border-color: #879ca3;
+    --border-shadow: #b3a8a0;
+    --font: "Voltaire";
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* styling of a href links */
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-family: var(--font);
+    font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* header styling */
+
+header  {
+    background-color:  var(--background-color);
+    border: var(--border-color) solid 7px;
+    color: var(--text-color);
+    padding: 5px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    width: 98%;
+}
+
+/* Various css styling */
+
+.me {
+    color: var(--text-color);
+    padding: 12px 0 12px 12px;
+    font-family: var(--font);
+    font-weight: bold;
+    font-size: 28px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.nav-links {
+    float: right;
+    padding: 12px 12px 12px 0;
+}
+
+body {
+    background-color: var(--background-color);
+    margin: 0;
+    position: relative;
+    top: 145px;
+}
+
+p {
+    color: var(--text-color);
+}
+
+.avatar {
+    border: var(--border-color) solid 10px;
+    border-radius: 50%;    
+}
+
+.img-container {
+    border: var(--border-color) solid 10px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+img:hover {
+    border-color: var(--border-shadow);
+    box-shadow: 0 0 5px 10px var(--border-shadow);
+}
+
+.about-title {
+    color: var(--text-color);
+    padding-left: 50px;
+    padding-right: 60px;
+    margin-right: 10px;
+    font-weight: bold;
+    font-family: var(--font);
+}
+
+.about-me {
+    color: var(--text-color);
+    height: 270px;
+    text-align: center;
+}
+
+footer {
+    color: var(--text-color);
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+input[type=text], select, textarea {
+    width: 50%;
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: var(--border-color);
+    color: var(#fff);
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: grab;
+}
+
+input[type=submit]:hover {
+    background-color: var(--border-shadow);
+}
+
+.container {
+    border-radius: 5px;
+    background-color: var(--background-color);
+    padding: 20px;
+}
+.table-style {
+    width:100%;
+    border:0;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
   }
-}
+  .size_of_img{
+  width:90px}
+
+/* responsive css below to make the site adjust and look right on different screens and devices */
+
+@media screen and (max-width: 992px) {
+    header  {
+        width: 50%;
+        margin-bottom: 50px;
+    }
+    .about-title {
+        width: 50%;
+        position: relative;
+        top: 60px;
+    }
+    .about-me {
+      width: 50%;
+      position: relative;
+      top: 60px;
+    }
+    p {
+        width: 50%;
+    }
+    img {
+        width: 50%;
+    }
+    .img-container {
+        width: 50%;
+    }
+    .avatar {
+        width: 50%;
+    }
+    nav {
+        width: 50%;
+    }
+    header {
+        width: 50%;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    header {
+        width: 100%;
+    }
+    .about-me {
+      width: 100%;
+    }
+    p {
+        width: 100%;
+    }
+    img {
+        width: 100%;
+    }
+    .img-container {
+        width: 100%;
+    }
+    header {
+        width: 100%;
+    }
+  }
+  
