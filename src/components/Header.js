@@ -1,4 +1,5 @@
 import React from "react";
+import Avatar from "../assets/images/avatar.png";
 
 export default function Header() {
   return (
@@ -6,12 +7,8 @@ export default function Header() {
       <nav>
         <span className="me">
           {" "}
-          <img
-            className="avatar"
-            src="../src/assets/images/avatar.png"
-            alt="Me"
-          />{" "}
-          Mark Brooks' Portfolio
+          <img className="avatar" src={Avatar} alt="Me" /> Mark Brooks'
+          Portfolio
         </span>
         <span className="nav-links">
           <a href="#about-me">About Me</a>&nbsp;&nbsp;&nbsp;&nbsp;
