@@ -3,6 +3,7 @@ import Nibbles from "../assets/images/nibbles.png";
 import Debug from "../assets/images/debug.png";
 import CodeIt from "../assets/images/codeIt.png";
 import Coming from "../assets/images/comingsoon.png";
+import Developy from "../assets/images/logo.png";
 
 const styling = {
   table1: {
@@ -40,7 +41,7 @@ export default function Work() {
         </a>
         <br />
         <a href="#">
-          <img className="img-container" src={Coming} alt="Work4" />
+          <img className="img-container" src={Developy} alt="Work4" />
         </a>
         <a href="#">
           <img className="img-container" src={Coming} alt="Work5" />
